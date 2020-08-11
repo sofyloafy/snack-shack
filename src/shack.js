@@ -1,6 +1,7 @@
 class Shack {
   constructor(){
     this.WAITING_TIME = 5
+    this.totalOrders = []
   }
 
   makeSandwich(order) {
@@ -9,6 +10,8 @@ class Shack {
       return 'Your order will be more than 5 minutes'
     }
     else {
+      this.totalOrders.push(order)
+      console.log(this.totalOrders)
     return (`Your order will be ${orderTime} minutes`) 
     }
   }
