@@ -4,11 +4,11 @@ let shack = new Shack
 
 describe('#Shack', () => {
   test('it should alert when an order will be too long', () => {
-    expect(shack.makeSandwich(5)).toBe('Your order will be more than 5 minutes')
+    expect(shack.makeSandwich(5)).toBe('Your order has been rejected as it will be more than 5 minutes')
   })
 
   test('it should alert when an order will be too long', () => {
-    expect(shack.makeSandwich(15)).toBe('Your order will be more than 5 minutes')
+    expect(shack.makeSandwich(15)).toBe('Your order has been rejected as it will be more than 5 minutes')
   })
 
   test('it should return how long to make order', () => {
