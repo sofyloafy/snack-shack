@@ -18,13 +18,17 @@ class Shack {
   }
 
   sequenceOrder(sandwiches, jacketPotato){
+    let plan = ""
     let orderTime = (sandwiches * 1.5)
     // if (orderTime < this.WAITING_TIME) {
-      let i = 0
+      let i = 1
       while (sandwiches >= i){
+        plan += `${i === 1 ? 1 : i + 1} ${sandwiches} sandwich orders placed, start making sandwich ${i}\n`
         i++
-        return `${i}. ${sandwiches} sandwich orders placed, start making sandwich ${i}\n${i+1}. serve sandwich ${i}`
+        plan +=`${i === 2 ? 2 : i + 1}. serve sandwich ${i-1}\n`
+
     }
+    console.log(plan)
   // }
 }
   
